@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="favicon.ico" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#800000" />
+    <meta name="description" content="Raeesh Management Training and Consulting Ltd is a premier provider of corporate training, strategic advisory, business restructuring, and management consulting services." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Raeesh Nigeria Limited - Management Training and Consulting</title>
+
+    <style>
+        /* Define custom maroon color */
+        :root {
+            --maroon-primary: #800000;
+            --maroon-dark: #600000;
+            --maroon-light: #f2e6e6;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom colors for Tailwind */
+        .bg-maroon { background-color: var(--maroon-dark); }
+        .text-maroon { color: var(--maroon-primary); }
+        .border-maroon { border-color: var(--maroon-primary); }
+        .hover\:bg-maroon-dark:hover { background-color: var(--maroon-dark); }
+        .hover\:text-maroon-dark:hover { color: var(--maroon-dark); }
+        
+        /* Navbar link hover effect */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+        .scrolled .nav-link::after {
+            background-color: var(--maroon-primary);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Carousel Styles */
+        .swiper-button-next, .swiper-button-prev {
+            color: white !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: white !important;
+        }
+
+        /* Animation class trigger */
+        .hidden-anim {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateY(20px);
+            transition: all 1s;
+        }
+        .show-anim {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <div id="root">
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 flex justify-between items-center text-white">
+            <div class="flex items-center">
+                <a href="/">
+                    <img alt="Raeesh Logo" class="h-12" src="/assets/logo.png" />
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center gap-10">
+                <a class="font-semibold nav-link" href="#services">Services</a>
+                <a class="font-semibold nav-link" href="#about">About Us</a>
+                <a class="font-semibold nav-link" href="#contact">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-maroon text-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 p-8 lg:hidden">
+            <button id="close-btn" class="absolute top-4 right-4 focus:outline-none">
+                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col gap-6 mt-16">
+                <a href="#services" class="font-semibold text-lg hover:text-maroon-dark">Services</a>
+                <a href="#about" class="font-semibold text-lg hover:text-maroon-dark">About Us</a>
+                <a href="#contact" class="font-semibold text-lg hover:text-maroon-dark">Contact</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="swiper hero-swiper w-full h-screen">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative w-full h-full bg-cover bg-no-repeat flex items-center bg-center" style='background-image: url("https://res.cloudinary.com/dxhx45ing/image/upload/q_auto,f_auto/v1733512898/pexels-bradleyhook-123335_ifo9vy.jpg");'>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                        <div class="relative z-10 max-w-4xl text-white pl-6 md:pl-20 lg:pl-32">
+                            <h2 class="text-xl uppercase font-bold mb-4 animate__animated animate__fadeInUp animate__delay-1s">RAEESH NIGERIA LIMITED</h2>
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInUp animate__delay-1.5s">Enhancing Organizational Efficiency & Driving Sustainable Growth</h1>
+                            <p class="text-xl mb-8 animate__animated animate__fadeInUp animate__delay-2s">We provide high-quality training and strategic consulting services that develop human capital and empower businesses to thrive.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative w-full h-full bg-cover bg-no-repeat flex items-center bg-center" style='background-image: url("https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");'>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                        <div class="relative z-10 max-w-4xl text-white pl-6 md:pl-20 lg:pl-32">
+                            <h2 class="text-xl uppercase font-bold mb-4">PREMIER TRAINING SOLUTIONS</h2>
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">Unlocking Your Team's Full Potential</h1>
+                            <p class="text-xl mb-8">Customized corporate and technical programs covering leadership, soft skills, finance, IT, and more.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative w-full h-full bg-cover bg-no-repeat flex items-center bg-center" style='background-image: url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");'>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                        <div class="relative z-10 max-w-4xl text-white pl-6 md:pl-20 lg:pl-32">
+                             <h2 class="text-xl uppercase font-bold mb-4">STRATEGIC CONSULTING</h2>
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">Navigate Complexity with Confidence</h1>
+                            <p class="text-xl mb-8">Partner with us for management consulting, organizational restructuring, and strategic advisory.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <section id="about" class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-20 px-6 gap-12">
+                <div class="w-full lg:w-1/2 hidden-anim">
+                    <h2 class="text-4xl font-bold leading-tight mb-4">Premier Training, Strategic Advisory, and Consulting</h2>
+                    <p class="text-lg text-gray-700 mt-4">Raeesh Management Training and Consulting Ltd is a premier provider of corporate training, strategic advisory, business restructuring, and management consulting services. We partner with organizations across diverse sectors, including finance, energy, oil and gas, healthcare, technology, education, and manufacturing.</p>
+                    <div class="mt-8">
+                        <a class="bg-maroon text-white font-semibold py-3 px-6 rounded-lg hover:bg-maroon-dark transition duration-300 inline-flex items-center" href="/about">
+                            Learn More About Us
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 hidden-anim">
+                    <img alt="Corporate meeting" class="object-cover rounded-lg shadow-2xl w-full h-auto max-h-[500px]" src="https://res.cloudinary.com/dxhx45ing/image/upload/q_auto,f_auto/v1734696475/pexels-inmortal-producciones-108299-336232_1_dfjaec.jpg" />
+                </div>
+            </section>
+
+            <section id="services" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6 text-center">
+                    <div class="hidden-anim">
+                        <h2 class="text-4xl font-bold">Our Services</h2>
+                        <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">Customized, practical, and results-driven solutions to empower your business.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                        <div class="text-center p-8 bg-white border rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <h3 class="text-xl font-semibold mb-2 text-maroon">Training Solutions</h3>
+                            <p class="text-gray-600">Corporate and technical programs covering leadership, soft skills, finance, IT, and industry-specific needs.</p>
+                        </div>
+                        <div class="text-center p-8 bg-white border rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <h3 class="text-xl font-semibold mb-2 text-maroon">Consulting Services</h3>
+                            <p class="text-gray-600">Management consulting, organizational restructuring, and outsourcing for HR, IT, and customer support.</p>
+                        </div>
+                        <div class="text-center p-8 bg-white border rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <h3 class="text-xl font-semibold mb-2 text-maroon">E-Learning</h3>
+                            <p class="text-gray-600">Customized virtual courses and interactive training modules to suit the modern workforce.</p>
+                        </div>
+                        <div class="text-center p-8 bg-white border rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <h3 class="text-xl font-semibold mb-2 text-maroon">Team Building</h3>
+                            <p class="text-gray-600">Interactive workshops and leadership retreats designed to strengthen collaboration and workplace culture.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="relative py-24 flex items-center justify-center bg-cover bg-center bg-fixed" style='background-image: url("https://res.cloudinary.com/dxhx45ing/image/upload/v1738160881/WhatsApp_Image_2025-01-28_at_13.13.45_2_mesbvb.jpg");'>
+                <div class="absolute inset-0 bg-black opacity-60"></div>
+                <div class="relative z-10 text-center text-white container mx-auto px-6 hidden-anim">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Enhance Your Organization?</h2>
+                    <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">For inquiries, partnerships, or consultations, reach out to us and let's drive sustainable growth together.</p>
+                    <a class="inline-block px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition duration-300" href="/contact">Contact Us</a>
+                </div>
+            </section>
+
+            <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 text-center md:text-left">
+                    <div>
+                        <img alt="Raeesh Logo" class="h-12 mb-4 mx-auto md:mx-0" src="/assets/logo.png" />
+                        <p class="text-gray-400">Effective training & consulting solutions to empower businesses and develop human capital.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-4 text-white uppercase">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a class="hover:text-white transition" href="#about">About Us</a></li>
+                            <li><a class="hover:text-white transition" href="#services">Services</a></li>
+                            <li><a class="hover:text-white transition" href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-4 text-white uppercase">Contact Us</h3>
+                        <p class="text-gray-400">First Floor Suite B9, Othni Plaza, Wuse Zone 1, Abuja</p>
+                        <p class="mt-2"><a class="text-white font-semibold hover:underline" href="mailto:raeeshconsult@gmail.com">raeeshconsult@gmail.com</a></p>
+                        <p class="mt-2"><a class="text-white font-semibold hover:underline" href="tel:09023582319">09023582319</a></p>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                    <p>© 2024 Raeesh Nigeria Limited. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('navbar');
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-maroon', 'shadow-lg', 'scrolled');
+                    navbar.classList.remove('text-white');
+                    navbar.classList.add('text-white'); // Ensure text remains white
+                } else {
+                    navbar.classList.remove('bg-maroon', 'shadow-lg', 'scrolled');
+                    navbar.classList.remove('text-white');
+                    navbar.classList.add('text-white');
+                }
+            });
+
+            // Mobile menu toggle
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+
+            // Initialize Swiper for the hero carousel
+            const swiper = new Swiper('.hero-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+            });
+
+            // Scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-anim');
+                    }
+                });
+            }, {
+              threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden-anim');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

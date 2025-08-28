@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="favicon.ico" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#800000" />
+    <meta name="description" content="Learn about Raeesh Nigeria Limited, our mission, vision, and the expert team dedicated to delivering impactful training and consulting solutions." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>About Us - Raeesh Nigeria Limited</title>
+
+    <style>
+        :root {
+            --maroon-primary: #800000;
+            --maroon-dark: #600000;
+            --maroon-light: #f2e6e6;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #ffffff; 
+        }
+
+        .bg-maroon { background-color: var(--maroon-primary); }
+        .text-maroon { color: var(--maroon-primary); }
+        .border-maroon { border-color: var(--maroon-primary); }
+        .hover\:bg-maroon-dark:hover { background-color: var(--maroon-dark); }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--maroon-primary);
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hidden-anim {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .show-anim {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 flex justify-between items-center bg-maroon text-white shadow-lg">
+            <div class="flex items-center">
+                <a href="/">
+                    <img alt="Raeesh Logo" class="h-12" src="/assets/logo.png" />
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center gap-10">
+                <a class="font-semibold nav-link" href="/#services">Services</a>
+                <a class="font-semibold nav-link" href="/about">About Us</a>
+                <a class="font-semibold nav-link" href="/contact">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-maroon text-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 p-8 lg:hidden">
+            <button id="close-btn" class="absolute top-4 right-4 focus:outline-none">
+                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col gap-6 mt-16">
+                <a href="/#services" class="font-semibold text-lg hover:text-maroon-dark">Services</a>
+                <a href="/about" class="font-semibold text-lg hover:text-maroon-dark">About Us</a>
+                <a href="/contact" class="font-semibold text-lg hover:text-maroon-dark">Contact</a>
+            </div>
+        </div>
+
+        <main>
+            <header class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style='background-image: url("https://res.cloudinary.com/dxhx45ing/image/upload/v1734612957/pexels-fauxels-3184316_g690xs.jpg");'>
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="relative z-10 px-6">
+                    <h1 class="text-5xl md:text-6xl font-bold animate__animated animate__fadeInDown">About Raeesh Nigeria Limited</h1>
+                    <p class="text-xl mt-4 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">We are driven by the conviction that impactful change is achieved through strategic thinking, collaborative innovation, and unwavering commitment.</p>
+                </div>
+            </header>
+
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center hidden-anim">
+                    <p class="text-xl md:text-2xl text-maroon italic max-w-4xl mx-auto">
+                        "At <strong>Raeesh</strong>, we distinguish ourselves through our collaborative partnership model. We view every engagement as an opportunity to co-create solutions that address the unique challenges and goals of our clients."
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+                    <div class="text-center p-8 hidden-anim">
+                         <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+                         <p class="text-lg text-gray-600">Leveraging industry expertise to provide businesses and professionals with high-quality training and strategic consulting services that enhance organizational efficiency, develop human capital, and drive sustainable growth.</p>
+                    </div>
+                    <div class="text-center p-8 hidden-anim">
+                         <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+                         <p class="text-lg text-gray-600">To be a globally recognized management training and consulting leader who drives real impact across various industries and be the go-to partner for organizations and professionals seeking transformative business solutions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <div class="hidden-anim">
+                        <h2 class="text-4xl font-bold text-gray-800">Meet Our Leadership</h2>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Our team consists of certified professionals and industry leaders with decades of combined experience, ready to drive efficiency and performance improvements.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto">
+                        <div class="text-center hidden-anim">
+                            <img alt="Ova Abdul Rahman" class="w-40 h-40 rounded-full object-cover mx-auto shadow-lg bg-gray-200" src="https://res.cloudinary.com/dxhx45ing/image/upload/v1738146401/WhatsApp_Image_2025-01-29_at_11.26.07_fak7xr.jpg"/>
+                            <div class="mt-4">
+                                <h4 class="text-xl font-semibold text-gray-800">Ova Abdul Rahman, CPP, FNIIS, CSS</h4>
+                                <p class="text-md text-maroon">Managing Director/CEO</p>
+                            </div>
+                        </div>
+                        <div class="text-center hidden-anim">
+                            <img alt="Ibrahim Aliu" class="w-40 h-40 rounded-full object-cover mx-auto shadow-lg bg-gray-200" src="https://res.cloudinary.com/dxhx45ing/image/upload/v1738146402/WhatsApp_Image_2025-01-29_at_11.26.03_rw1zvz.jpg"/>
+                            <div class="mt-4">
+                                <h4 class="text-xl font-semibold text-gray-800">Ibrahim Aliu, PMP</h4>
+                                <p class="text-md text-maroon">Director</p>
+                            </div>
+                        </div>
+                        <div class="text-center hidden-anim">
+                            <img alt="Fawzah B. Alimi" class="w-40 h-40 rounded-full bg-gray-200 object-cover mx-auto shadow-lg" src="https://res.cloudinary.com/dxhx45ing/image/upload/v1739447842/WhatsApp_Image_2025-02-13_at_12.55.28_p35ctp.jpg"/>
+                            <div class="mt-4">
+                                <h4 class="text-xl font-semibold text-gray-800">Fawzah B. Alimi</h4>
+                                <p class="text-md text-maroon">Head Facilitator & Workplace Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6 text-center">
+                     <div class="hidden-anim">
+                        <h2 class="text-4xl font-bold text-gray-800">Our Expertise</h2>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Our solutions are designed to meet the unique challenges of each sector, ensuring organizations receive highly relevant and impactful services.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <img alt="Leadership & Management Training" class="w-full h-56 object-cover" src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                            <div class="p-6 text-left">
+                                <h4 class="text-xl font-semibold text-maroon">Leadership & Management Training</h4>
+                                <p class="text-gray-600 mt-2">Developing team leaders and managers in decision-making, strategic thinking, and effective management to boost productivity.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <img alt="Strategic Business Consulting" class="w-full h-56 object-cover" src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                            <div class="p-6 text-left">
+                                <h4 class="text-xl font-semibold text-maroon">Strategic Business Consulting</h4>
+                                <p class="text-gray-600 mt-2">Providing market research, competitive analysis, and process improvement strategies to support data-driven decision-making.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hidden-anim">
+                            <img alt="HR & Talent Development" class="w-full h-56 object-cover" src="https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                            <div class="p-6 text-left">
+                                <h4 class="text-xl font-semibold text-maroon">HR & Talent Development</h4>
+                                <p class="text-gray-600 mt-2">Building high-performing teams through targeted programs in talent acquisition, performance management, and employee engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative text-white bg-cover bg-center bg-fixed" style="background-image: url('https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="relative z-10 container mx-auto px-6 py-24 text-center">
+                    <div class="hidden-anim">
+                        <h2 class="text-4xl font-bold">Ready to Partner With Us?</h2>
+                        <p class="text-lg max-w-2xl mx-auto mt-4">Take the first step toward building a meaningful partnership with Raeesh. Let's work together to achieve your organization's goals.</p>
+                        <a href="/contact" class="mt-8 inline-block bg-white text-maroon font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-200 transition-colors duration-300">Contact Us Today</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer id="contact" class="bg-gray-800 text-gray-300 py-16">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 text-center md:text-left">
+                <div>
+                    <img alt="Raeesh Logo" class="h-12 mb-4 mx-auto md:mx-0" src="/assets/logo.png" />
+                    <p class="text-gray-400">Effective training & consulting solutions to empower businesses and develop human capital.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white uppercase">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:text-white transition" href="/#about">About Us</a></li>
+                        <li><a class="hover:text-white transition" href="/#services">Services</a></li>
+                        <li><a class="hover:text-white transition" href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white uppercase">Contact Us</h3>
+                    <p class="text-gray-400">First Floor Suite B9, Othni Plaza, Wuse Zone 1, Abuja</p>
+                    <p class="mt-2"><a class="text-white font-semibold hover:underline" href="mailto:raeeshconsult@gmail.com">raeeshconsult@gmail.com</a></p>
+                    <p class="mt-2"><a class="text-white font-semibold hover:underline" href="tel:09023582319">09023582319</a></p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>© 2025 Raeesh Nigeria Limited. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => { mobileMenu.classList.remove('translate-x-full'); });
+            }
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); });
+            }
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-anim');
+                    }
+                });
+            }, {
+              threshold: 0.15
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden-anim');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
